@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <head> <meta name="viewport" content="width=device-width, user-scalable=no" /></head>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  
+</head>
+<style>
+.w3-btn {margin-bottom:10px;}
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+  
+</style>
+
+<body>
+
+
+<div data-role="page" id="pageone">
+  <div data-role="content">
+  <div class="my-wrapper" >
+    <ul data-role="listview" data-autodividers="false" data-inset="true" data-filter="true" data-theme="a" data-filter-placeholder="Find Shortcut" data-filter-theme="e">
+
+<li><h2 class="wrap">Create New Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + N</button>or <button class="ui-btn ui-btn-inline">⌘ + N</button></li>
+<li><h2 class="wrap">Open Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + O</button>or <button class="ui-btn ui-btn-inline">⌘ + O</button></li>
+<li><h2 class="wrap">Save Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + S</button>or <button class="ui-btn ui-btn-inline">⌘ + S</button></li>
+<li><h2 class="wrap">Save As</h2><button class="ui-btn ui-btn-inline">F12</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧S</button></li>
+<li><h2 class="wrap">Print File</h2><button class="ui-btn ui-btn-inline">Ctrl + P</button>or <button class="ui-btn ui-btn-inline">⌘ + P</button></li>
+<li><h2 class="wrap">Open Print Preview Window</h2><button class="ui-btn ui-btn-inline">Ctrl + F2</button>or <button class="ui-btn ui-btn-inline">Close current workbook</button></li>
+<li><h2 class="wrap">Close Current Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + F4</button>or <button class="ui-btn ui-btn-inline">⌘ + W</button></li>
+<li><h2 class="wrap">Close Excel</h2><button class="ui-btn ui-btn-inline">Alt + F4</button>or <button class="ui-btn ui-btn-inline">⌘ + Q</button></li>
+<li><h2 class="wrap">Expand Or Collapse Ribbon</h2><button class="ui-btn ui-btn-inline">Ctrl + F1</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥R</button></li>
+<li><h2 class="wrap">Activate Access Keys</h2><button class="ui-btn ui-btn-inline">Alt + </button>or <button class="ui-btn ui-btn-inline">Move to next ribbon control</button></li>
+<li><h2 class="wrap">Move To Next Ribbon Control</h2><button class="ui-btn ui-btn-inline">Tab</button>or <button class="ui-btn ui-btn-inline">Tab</button></li>
+<li><h2 class="wrap">Activate Or Open Selected Control</h2><button class="ui-btn ui-btn-inline">Space</button>or <button class="ui-btn ui-btn-inline">Space</button></li>
+<li><h2 class="wrap">Confirm Control Change</h2><button class="ui-btn ui-btn-inline">Enter</button>or <button class="ui-btn ui-btn-inline">Return</button></li>
+<li><h2 class="wrap">Get Help On Selected Control</h2><button class="ui-btn ui-btn-inline">F1</button>or <button class="ui-btn ui-btn-inline">General</button></li>
+<li><h2 class="wrap">Open Help</h2><button class="ui-btn ui-btn-inline">F1</button>or <button class="ui-btn ui-btn-inline">⌘ + /</button></li>
+<li><h2 class="wrap">Undo Last Action</h2><button class="ui-btn ui-btn-inline">Ctrl + Z</button>or <button class="ui-btn ui-btn-inline">⌘ + Z</button></li>
+<li><h2 class="wrap">Redo Last Action</h2><button class="ui-btn ui-btn-inline">Ctrl + Y</button>or <button class="ui-btn ui-btn-inline">⌘ + Y</button></li>
+<li><h2 class="wrap">Copy Selected Cells</h2><button class="ui-btn ui-btn-inline">Ctrl + C</button>or <button class="ui-btn ui-btn-inline">⌘ + C</button></li>
+<li><h2 class="wrap">Repeat Last Action</h2><button class="ui-btn ui-btn-inline">F4</button>or <button class="ui-btn ui-btn-inline">⌘ + Y</button></li>
+<li><h2 class="wrap">Cut Selected Cells</h2><button class="ui-btn ui-btn-inline">Ctrl + X</button>or <button class="ui-btn ui-btn-inline">⌘ + X</button></li>
+<li><h2 class="wrap">Paste Content From Clipboard</h2><button class="ui-btn ui-btn-inline">Ctrl + V</button>or <button class="ui-btn ui-btn-inline">⌘ + V</button></li>
+<li><h2 class="wrap">Display The Paste Special Dialog Box</h2><button class="ui-btn ui-btn-inline">Ctrl + Alt + V</button>or <button class="ui-btn ui-btn-inline">⌃⌘ + V</button></li>
+<li><h2 class="wrap">Display Find And Replace</h2><button class="ui-btn ui-btn-inline">Ctrl + F</button>or <button class="ui-btn ui-btn-inline">⌘ + F</button></li>
+<li><h2 class="wrap">Display Find And Replace, Replace Selected</h2><button class="ui-btn ui-btn-inline">Ctrl + H</button>or <button class="ui-btn ui-btn-inline">⌃H</button></li>
+<li><h2 class="wrap">Find Next Match</h2><button class="ui-btn ui-btn-inline">Shift + F4</button>or <button class="ui-btn ui-btn-inline">⌘ + G</button></li>
+<li><h2 class="wrap">Find Previous Match</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + F4</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧G</button></li>
+<li><h2 class="wrap">Create Embedded Chart</h2><button class="ui-btn ui-btn-inline">Alt + F1</button>or <button class="ui-btn ui-btn-inline">Fn + ⌥F1</button></li>
+<li><h2 class="wrap">Create Chart In New Worksheet</h2><button class="ui-btn ui-btn-inline">F11</button>or <button class="ui-btn ui-btn-inline">Fn + F11</button></li>
+<li><h2 class="wrap">Toggle Autofilter</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + L</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧F</button></li>
+<li><h2 class="wrap">Activate Filter</h2><button class="ui-btn ui-btn-inline">Alt + ↓</button>or <button class="ui-btn ui-btn-inline">⌥↓</button></li>
+<li><h2 class="wrap">Insert Table</h2><button class="ui-btn ui-btn-inline">Ctrl + T</button>or <button class="ui-btn ui-btn-inline">⌃T</button></li>
+<li><h2 class="wrap">Select Table Row</h2><button class="ui-btn ui-btn-inline">Shift + Space</button>or <button class="ui-btn ui-btn-inline">⇧Space</button></li>
+<li><h2 class="wrap">Select Table Column</h2><button class="ui-btn ui-btn-inline">Ctrl + Space</button>or <button class="ui-btn ui-btn-inline">⌃Space</button></li>
+<li><h2 class="wrap">Select Table</h2><button class="ui-btn ui-btn-inline">Ctrl + A</button>or <button class="ui-btn ui-btn-inline">⌘ + A</button></li>
+<li><h2 class="wrap">Drag And Cut</h2><button class="ui-btn ui-btn-inline">drag</button>or <button class="ui-btn ui-btn-inline">drag</button></li>
+<li><h2 class="wrap">Drag And Copy</h2><button class="ui-btn ui-btn-inline">Ctrl + drag</button>or <button class="ui-btn ui-btn-inline">⌥drag</button></li>
+<li><h2 class="wrap">Drag And Insert</h2><button class="ui-btn ui-btn-inline">Shift + drag</button>or <button class="ui-btn ui-btn-inline">⇧drag</button></li>
+<li><h2 class="wrap">Drag And Insert Copy</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + drag</button>or <button class="ui-btn ui-btn-inline">⌥⇧drag</button></li>
+<li><h2 class="wrap">Drag To Worksheet</h2><button class="ui-btn ui-btn-inline">Alt + drag</button>or <button class="ui-btn ui-btn-inline">⌘ + drag</button></li>
+<li><h2 class="wrap">Drag To Duplicate Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + drag</button>or <button class="ui-btn ui-btn-inline">⌥drag</button></li>
+<li><h2 class="wrap">Move One Cell Right</h2><button class="ui-btn ui-btn-inline">→</button>or <button class="ui-btn ui-btn-inline">→</button></li>
+<li><h2 class="wrap">Move One Cell Left</h2><button class="ui-btn ui-btn-inline">←</button>or <button class="ui-btn ui-btn-inline">←</button></li>
+<li><h2 class="wrap">Move One Cell Up</h2><button class="ui-btn ui-btn-inline">↑</button>or <button class="ui-btn ui-btn-inline">↑</button></li>
+<li><h2 class="wrap">Move One Cell Down</h2><button class="ui-btn ui-btn-inline">↓</button>or <button class="ui-btn ui-btn-inline">↓</button></li>
+<li><h2 class="wrap">Move One Screen Right</h2><button class="ui-btn ui-btn-inline">Alt + PgDn</button>or <button class="ui-btn ui-btn-inline">Fn + ⌥↓</button></li>
+<li><h2 class="wrap">Move One Screen Left</h2><button class="ui-btn ui-btn-inline">Alt + PgUp</button>or <button class="ui-btn ui-btn-inline">Fn + ⌥↑</button></li>
+<li><h2 class="wrap">Move One Screen Up</h2><button class="ui-btn ui-btn-inline">PgUp</button>or <button class="ui-btn ui-btn-inline">Fn + ↑</button></li>
+<li><h2 class="wrap">Move One Screen Down</h2><button class="ui-btn ui-btn-inline">PgDn</button>or <button class="ui-btn ui-btn-inline">Fn + ↓</button></li>
+<li><h2 class="wrap">Move To Right Edge Of Data Region</h2><button class="ui-btn ui-btn-inline">Ctrl + →</button>or <button class="ui-btn ui-btn-inline">⌃→</button></li>
+<li><h2 class="wrap">Move To Left Edge Of Data Region</h2><button class="ui-btn ui-btn-inline">Ctrl + ←</button>or <button class="ui-btn ui-btn-inline">⌃←</button></li>
+<li><h2 class="wrap">Move To Top Edge Of Data Region</h2><button class="ui-btn ui-btn-inline">Ctrl + ↑</button>or <button class="ui-btn ui-btn-inline">⌃↑</button></li>
+<li><h2 class="wrap">Move To Bottom Edge Of Data Region</h2><button class="ui-btn ui-btn-inline">Ctrl + ↓</button>or <button class="ui-btn ui-btn-inline">⌃↓</button></li>
+<li><h2 class="wrap">Move To Beginning Of Row</h2><button class="ui-btn ui-btn-inline">Home</button>or <button class="ui-btn ui-btn-inline">Fn + ←</button></li>
+<li><h2 class="wrap">Move To Last Cell In Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + End</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃→</button></li>
+<li><h2 class="wrap">Move To First Cell In Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + Home</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃←</button></li>
+<li><h2 class="wrap">Turn End Mode On</h2><button class="ui-btn ui-btn-inline">End</button>or <button class="ui-btn ui-btn-inline">Fn + →</button></li>
+<li><h2 class="wrap">Select Entire Row</h2><button class="ui-btn ui-btn-inline">Shift + Space</button>or <button class="ui-btn ui-btn-inline">⇧Space</button></li>
+<li><h2 class="wrap">Select Entire Column</h2><button class="ui-btn ui-btn-inline">Ctrl + Space</button>or <button class="ui-btn ui-btn-inline">⌃Space</button></li>
+<li><h2 class="wrap">Select Entire Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + A</button>or <button class="ui-btn ui-btn-inline">⌘ + A</button></li>
+<li><h2 class="wrap">Add Adjacent Cells To Selection</h2><button class="ui-btn ui-btn-inline">Shift + Click</button>or <button class="ui-btn ui-btn-inline">⇧Click</button></li>
+<li><h2 class="wrap">Add Non-Adjacent Cells To Selection</h2><button class="ui-btn ui-btn-inline">Ctrl + Click</button>or <button class="ui-btn ui-btn-inline">⌘ + Click</button></li>
+<li><h2 class="wrap">Same Selection In Next Column</h2><button class="ui-btn ui-btn-inline">⌥Tab</button>or <button class="ui-btn ui-btn-inline">Same selection in previous column</button></li>
+<li><h2 class="wrap">Same Selection In Previous Column</h2><button class="ui-btn ui-btn-inline">⌥⇧Tab</button>or <button class="ui-btn ui-btn-inline">Move right between non-adjacent selections</button></li>
+<li><h2 class="wrap">Move Right Between Non-Adjacent Selections</h2><button class="ui-btn ui-btn-inline">Ctrl + Alt + →</button>or <button class="ui-btn ui-btn-inline">⌃⌥→</button></li>
+<li><h2 class="wrap">Move Left Between Non-Adjacent Selections</h2><button class="ui-btn ui-btn-inline">Ctrl + Alt + ←</button>or <button class="ui-btn ui-btn-inline">⌃⌥←</button></li>
+<li><h2 class="wrap">Toggle Add To Selection Mode</h2><button class="ui-btn ui-btn-inline">Shift + F8</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F8</button></li>
+<li><h2 class="wrap">Cancel Selection</h2><button class="ui-btn ui-btn-inline">Esc</button>or <button class="ui-btn ui-btn-inline">Esc</button></li>
+<li><h2 class="wrap">Select Active Cell Only</h2><button class="ui-btn ui-btn-inline">Shift + Backspace</button>or <button class="ui-btn ui-btn-inline">⇧Delete</button></li>
+<li><h2 class="wrap">Show The Active Cell On Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + Backspace</button>or <button class="ui-btn ui-btn-inline">⌘ + Delete</button></li>
+<li><h2 class="wrap">Move Active Cell Clockwise In Selection</h2><button class="ui-btn ui-btn-inline">Ctrl + .</button>or <button class="ui-btn ui-btn-inline">⌃.</button></li>
+<li><h2 class="wrap">Move Active Cell Down In Selection</h2><button class="ui-btn ui-btn-inline">Enter</button>or <button class="ui-btn ui-btn-inline">Return</button></li>
+<li><h2 class="wrap">Move Active Cell Up In Selection</h2><button class="ui-btn ui-btn-inline">Shift + Enter</button>or <button class="ui-btn ui-btn-inline">⇧Return</button></li>
+<li><h2 class="wrap">Move Active Cell Right In A Selection</h2><button class="ui-btn ui-btn-inline">Tab</button>or <button class="ui-btn ui-btn-inline">Tab</button></li>
+<li><h2 class="wrap">Move Active Cell Left In A Selection</h2><button class="ui-btn ui-btn-inline">Shift + Tab</button>or <button class="ui-btn ui-btn-inline">⇧Tab</button></li>
+<li><h2 class="wrap">Extend Selection By One Cell Right</h2><button class="ui-btn ui-btn-inline">Shift + →</button>or <button class="ui-btn ui-btn-inline">⇧→</button></li>
+<li><h2 class="wrap">Extend Selection By One Cell Left</h2><button class="ui-btn ui-btn-inline">Shift + ←</button>or <button class="ui-btn ui-btn-inline">⇧←</button></li>
+<li><h2 class="wrap">Extend Selection By One Cell Up</h2><button class="ui-btn ui-btn-inline">Shift + ↑</button>or <button class="ui-btn ui-btn-inline">⇧↑</button></li>
+<li><h2 class="wrap">Extend Selection By One Cell Down</h2><button class="ui-btn ui-btn-inline">Shift + ↓</button>or <button class="ui-btn ui-btn-inline">⇧↓</button></li>
+<li><h2 class="wrap">Extend The Selection To The Last Cell Right</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + →</button>or <button class="ui-btn ui-btn-inline">⌃⇧→</button></li>
+<li><h2 class="wrap">Extend The Selection To The Last Cell Left</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ←</button>or <button class="ui-btn ui-btn-inline">⌃⇧←</button></li>
+<li><h2 class="wrap">Extend The Selection To The Last Cell Up</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ↑</button>or <button class="ui-btn ui-btn-inline">⌃⇧↑</button></li>
+<li><h2 class="wrap">Extend The Selection To The Last Cell Down</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ↓</button>or <button class="ui-btn ui-btn-inline">⌃⇧↓</button></li>
+<li><h2 class="wrap">Extend Selection Up One Screen</h2><button class="ui-btn ui-btn-inline">Shift + PgUp</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧↑</button></li>
+<li><h2 class="wrap">Extend Selection Down One Screen</h2><button class="ui-btn ui-btn-inline">Shift + PgDn</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧↓</button></li>
+<li><h2 class="wrap">Extend Selection Right One Screen</h2><button class="ui-btn ui-btn-inline">Alt + Shift + PgDn</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧⌘ + ↓</button></li>
+<li><h2 class="wrap">Extend Selection Left One Screen</h2><button class="ui-btn ui-btn-inline">Alt + Shift + PgUp</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧⌘ + ↑</button></li>
+<li><h2 class="wrap">Extend Selection To Start Of Row</h2><button class="ui-btn ui-btn-inline">Shift + Home</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧←</button></li>
+<li><h2 class="wrap">Extend Selection To First Cell In Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + Home</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃⇧←</button></li>
+<li><h2 class="wrap">Extend Selection To Last Cell In Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + End</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃⇧→</button></li>
+<li><h2 class="wrap">Toggle Extend Selection Mode</h2><button class="ui-btn ui-btn-inline">F8</button>or <button class="ui-btn ui-btn-inline">Fn + F8</button></li>
+<li><h2 class="wrap">Display 'Go To' Dialog Box</h2><button class="ui-btn ui-btn-inline">Ctrl + G</button>or <button class="ui-btn ui-btn-inline">⌃G</button></li>
+<li><h2 class="wrap">Select Cells With Comments</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + O</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃⇧O</button></li>
+<li><h2 class="wrap">Select Current Region Around Active Cell</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + *</button>or <button class="ui-btn ui-btn-inline">⇧⌃Space</button></li>
+<li><h2 class="wrap">Select Current Region</h2><button class="ui-btn ui-btn-inline">Ctrl + A</button>or <button class="ui-btn ui-btn-inline">⌘ + A</button></li>
+<li><h2 class="wrap">Select Current Array</h2><button class="ui-btn ui-btn-inline">Ctrl + /</button>or <button class="ui-btn ui-btn-inline">⌃/</button></li>
+<li><h2 class="wrap">Select Row Differences</h2><button class="ui-btn ui-btn-inline">Ctrl + \</button>or <button class="ui-btn ui-btn-inline">⌃\</button></li>
+<li><h2 class="wrap">Select Column Differences</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + |</button>or <button class="ui-btn ui-btn-inline">⌃⇧|</button></li>
+<li><h2 class="wrap">Select Direct Precedents</h2><button class="ui-btn ui-btn-inline">Ctrl + [</button>or <button class="ui-btn ui-btn-inline">⌃[</button></li>
+<li><h2 class="wrap">Select All Precedents</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + {</button>or <button class="ui-btn ui-btn-inline">⌃⇧{</button></li>
+<li><h2 class="wrap">Select Direct Dependents</h2><button class="ui-btn ui-btn-inline">Ctrl + ]</button>or <button class="ui-btn ui-btn-inline">⌃]</button></li>
+<li><h2 class="wrap">Select All Dependents</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + }</button>or <button class="ui-btn ui-btn-inline">⌃⇧}</button></li>
+<li><h2 class="wrap">Select Visible Cells Only</h2><button class="ui-btn ui-btn-inline">Alt + ;</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧Z</button></li>
+<li><h2 class="wrap">Edit The Active Cell</h2><button class="ui-btn ui-btn-inline">F2</button>or <button class="ui-btn ui-btn-inline">⌃U</button></li>
+<li><h2 class="wrap">Insert Or Edit Comment</h2><button class="ui-btn ui-btn-inline">Shift + F2</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F2</button></li>
+<li><h2 class="wrap">Cancel Entry</h2><button class="ui-btn ui-btn-inline">Esc</button>or <button class="ui-btn ui-btn-inline">Esc</button></li>
+<li><h2 class="wrap">Select One Character Right</h2><button class="ui-btn ui-btn-inline">Shift + →</button>or <button class="ui-btn ui-btn-inline">⇧→</button></li>
+<li><h2 class="wrap">Select One Character Left</h2><button class="ui-btn ui-btn-inline">Shift + ←</button>or <button class="ui-btn ui-btn-inline">⇧←</button></li>
+<li><h2 class="wrap">Move One Word Right</h2><button class="ui-btn ui-btn-inline">Ctrl + →</button>or <button class="ui-btn ui-btn-inline">⌃→</button></li>
+<li><h2 class="wrap">Move One Word Left</h2><button class="ui-btn ui-btn-inline">Ctrl + ←</button>or <button class="ui-btn ui-btn-inline">⌃←</button></li>
+<li><h2 class="wrap">Select One Word Right</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + →</button>or <button class="ui-btn ui-btn-inline">⌃⇧→</button></li>
+<li><h2 class="wrap">Select One Word Left</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ←</button>or <button class="ui-btn ui-btn-inline">⌃⇧←</button></li>
+<li><h2 class="wrap">Select To Beginning Of Cell</h2><button class="ui-btn ui-btn-inline">Shift + Home</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧←</button></li>
+<li><h2 class="wrap">Select To End Of Cell</h2><button class="ui-btn ui-btn-inline">Shift + End</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧→</button></li>
+<li><h2 class="wrap">Delete To End Of Line</h2><button class="ui-btn ui-btn-inline">Ctrl + Delete</button>or <button class="ui-btn ui-btn-inline">⌃Delete</button></li>
+<li><h2 class="wrap">Delete Character To The Left Of Cursor</h2><button class="ui-btn ui-btn-inline">Backspace</button>or <button class="ui-btn ui-btn-inline">Delete</button></li>
+<li><h2 class="wrap">Delete Character To The Right Of Cursor</h2><button class="ui-btn ui-btn-inline">Delete</button>or <button class="ui-btn ui-btn-inline">Fn + Delete</button></li>
+<li><h2 class="wrap">Start A New Line In The Same Cell</h2><button class="ui-btn ui-btn-inline">Alt + Enter</button>or <button class="ui-btn ui-btn-inline">⌃⌥Return</button></li>
+<li><h2 class="wrap">Enter And Move Down</h2><button class="ui-btn ui-btn-inline">Enter</button>or <button class="ui-btn ui-btn-inline">Return</button></li>
+<li><h2 class="wrap">Enter And Move Up</h2><button class="ui-btn ui-btn-inline">Shift + Enter</button>or <button class="ui-btn ui-btn-inline">⇧Return</button></li>
+<li><h2 class="wrap">Enter And Move Right</h2><button class="ui-btn ui-btn-inline">Tab</button>or <button class="ui-btn ui-btn-inline">Tab</button></li>
+<li><h2 class="wrap">Enter And Move Left</h2><button class="ui-btn ui-btn-inline">Shift + Tab</button>or <button class="ui-btn ui-btn-inline">⇧Tab</button></li>
+<li><h2 class="wrap">Complete Entry And Stay In Same Cell</h2><button class="ui-btn ui-btn-inline">Ctrl + Enter</button>or <button class="ui-btn ui-btn-inline">⌃Return</button></li>
+<li><h2 class="wrap">Enter Same Data In Multiple Cells</h2><button class="ui-btn ui-btn-inline">Ctrl + Enter</button>or <button class="ui-btn ui-btn-inline">⌃Return</button></li>
+<li><h2 class="wrap">Insert Current Date</h2><button class="ui-btn ui-btn-inline">Ctrl + ;</button>or <button class="ui-btn ui-btn-inline">⌃;</button></li>
+<li><h2 class="wrap">Insert Current Time</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + :</button>or <button class="ui-btn ui-btn-inline">⌃⇧:</button></li>
+<li><h2 class="wrap">Fill Down From Cell Above</h2><button class="ui-btn ui-btn-inline">Ctrl + D</button>or <button class="ui-btn ui-btn-inline">⌃D</button></li>
+<li><h2 class="wrap">Fill Right From Cell Left</h2><button class="ui-btn ui-btn-inline">Ctrl + R</button>or <button class="ui-btn ui-btn-inline">⌃R</button></li>
+<li><h2 class="wrap">Copy Formula From Cell Above</h2><button class="ui-btn ui-btn-inline">Ctrl + '</button>or <button class="ui-btn ui-btn-inline">⌃'</button></li>
+<li><h2 class="wrap">Copy Value From Cell Above</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + "</button>or <button class="ui-btn ui-btn-inline">⌃⇧"</button></li>
+<li><h2 class="wrap">Add Hyperlink</h2><button class="ui-btn ui-btn-inline">Ctrl + K</button>or <button class="ui-btn ui-btn-inline">⌘ + K</button></li>
+<li><h2 class="wrap">Display Autocomplete List</h2><button class="ui-btn ui-btn-inline">Alt + ↓</button>or <button class="ui-btn ui-btn-inline">⌥↓</button></li>
+<li><h2 class="wrap">Flash Fill</h2><button class="ui-btn ui-btn-inline">Ctrl + E</button>or <button class="ui-btn ui-btn-inline">Formatting</button></li>
+<li><h2 class="wrap">Format (Almost) Anything</h2><button class="ui-btn ui-btn-inline">Ctrl + 1</button>or <button class="ui-btn ui-btn-inline">⌘ + 1</button></li>
+<li><h2 class="wrap">Display Format Cells With Font Tab Selected</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + F</button>or <button class="ui-btn ui-btn-inline">⌃⇧F</button></li>
+<li><h2 class="wrap">Apply Or Remove Bold Formatting</h2><button class="ui-btn ui-btn-inline">Ctrl + B</button>or <button class="ui-btn ui-btn-inline">⌘ + B</button></li>
+<li><h2 class="wrap">Apply Or Remove Italic Formatting</h2><button class="ui-btn ui-btn-inline">Ctrl + I</button>or <button class="ui-btn ui-btn-inline">⌘ + I</button></li>
+<li><h2 class="wrap">Apply Or Remove Underscoring</h2><button class="ui-btn ui-btn-inline">Ctrl + U</button>or <button class="ui-btn ui-btn-inline">⌘ + U</button></li>
+<li><h2 class="wrap">Apply Or Remove Strikethrough Formatting</h2><button class="ui-btn ui-btn-inline">Ctrl + 5</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧X</button></li>
+<li><h2 class="wrap">Add Or Remove The Shadow Font Style</h2><button class="ui-btn ui-btn-inline">⌘⇧W</button>or <button class="ui-btn ui-btn-inline">Add or remove the outline font style</button></li>
+<li><h2 class="wrap">Add Or Remove The Outline Font Style</h2><button class="ui-btn ui-btn-inline">⌘⇧D</button>or <button class="ui-btn ui-btn-inline">Align center</button></li>
+<li><h2 class="wrap">Align Center</h2><button class="ui-btn ui-btn-inline">Alt + HAC</button>or <button class="ui-btn ui-btn-inline">⌘ + E</button></li>
+<li><h2 class="wrap">Align Left</h2><button class="ui-btn ui-btn-inline">Alt + HAL</button>or <button class="ui-btn ui-btn-inline">⌘ + L</button></li>
+<li><h2 class="wrap">Align Right</h2><button class="ui-btn ui-btn-inline">Alt + HAR</button>or <button class="ui-btn ui-btn-inline">⌘ + R</button></li>
+<li><h2 class="wrap">Indent</h2><button class="ui-btn ui-btn-inline">Alt + H6</button>or <button class="ui-btn ui-btn-inline">⌃⌥Tab</button></li>
+<li><h2 class="wrap">Remove Indent</h2><button class="ui-btn ui-btn-inline">Alt + H5</button>or <button class="ui-btn ui-btn-inline">⌃⌥⇧Tab</button></li>
+<li><h2 class="wrap">Increase Font Size One Step</h2><button class="ui-btn ui-btn-inline">Alt + HFG</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧></button></li>
+<li><h2 class="wrap">Decrease Font Size One Step</h2><button class="ui-btn ui-btn-inline">Alt + HFK</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧<</button></li>
+<li><h2 class="wrap">Apply General Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ~</button>or <button class="ui-btn ui-btn-inline">⌃⇧~</button></li>
+<li><h2 class="wrap">Apply Currency Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + $</button>or <button class="ui-btn ui-btn-inline">⌃⇧$</button></li>
+<li><h2 class="wrap">Apply Percentage Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + %</button>or <button class="ui-btn ui-btn-inline">⌃⇧%</button></li>
+<li><h2 class="wrap">Apply Scientific Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + ^</button>or <button class="ui-btn ui-btn-inline">⌃⇧^</button></li>
+<li><h2 class="wrap">Apply Date Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + #</button>or <button class="ui-btn ui-btn-inline">⌃⇧#</button></li>
+<li><h2 class="wrap">Apply Time Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + @</button>or <button class="ui-btn ui-btn-inline">⌃⇧@</button></li>
+<li><h2 class="wrap">Apply Number Format</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + !</button>or <button class="ui-btn ui-btn-inline">⌃⇧!</button></li>
+<li><h2 class="wrap">Add Border Outline</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + &</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥0</button></li>
+<li><h2 class="wrap">Add Or Remove Border Right</h2><button class="ui-btn ui-btn-inline">Alt + R</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥→</button></li>
+<li><h2 class="wrap">Add Or Remove Border Left</h2><button class="ui-btn ui-btn-inline">Alt + L</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥←</button></li>
+<li><h2 class="wrap">Add Or Remove Border Top</h2><button class="ui-btn ui-btn-inline">Alt + T</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥↑</button></li>
+<li><h2 class="wrap">Add Or Remove Border Bottom</h2><button class="ui-btn ui-btn-inline">Alt + B</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥↓</button></li>
+<li><h2 class="wrap">Add Or Remove Border Upward Diagonal</h2><button class="ui-btn ui-btn-inline">Alt + D</button>or <button class="ui-btn ui-btn-inline">Add or remove border horizontal interior</button></li>
+<li><h2 class="wrap">Add Or Remove Border Horizontal Interior</h2><button class="ui-btn ui-btn-inline">Alt + H</button>or <button class="ui-btn ui-btn-inline">Add or remove border vertical interior</button></li>
+<li><h2 class="wrap">Add Or Remove Border Vertical Interior</h2><button class="ui-btn ui-btn-inline">Alt + V</button>or <button class="ui-btn ui-btn-inline">Remove borders</button></li>
+<li><h2 class="wrap">Remove Borders</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + _</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥_</button></li>
+<li><h2 class="wrap">Toggle Absolute And Relative References</h2><button class="ui-btn ui-btn-inline">F4</button>or <button class="ui-btn ui-btn-inline">⌘ + T</button></li>
+<li><h2 class="wrap">Open The Insert Function Dialog Box</h2><button class="ui-btn ui-btn-inline">Shift + F3</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F3</button></li>
+<li><h2 class="wrap">Autosum Selected Cells</h2><button class="ui-btn ui-btn-inline">Alt + =</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧T</button></li>
+<li><h2 class="wrap">Toggle Formulas On And Off</h2><button class="ui-btn ui-btn-inline">Ctrl + `</button>or <button class="ui-btn ui-btn-inline">⌃`</button></li>
+<li><h2 class="wrap">Insert Function Arguments</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + A</button>or <button class="ui-btn ui-btn-inline">⌃⇧A</button></li>
+<li><h2 class="wrap">Enter Array Formula</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + Enter</button>or <button class="ui-btn ui-btn-inline">⌃⇧Return</button></li>
+<li><h2 class="wrap">Calculate Worksheets</h2><button class="ui-btn ui-btn-inline">F9</button>or <button class="ui-btn ui-btn-inline">Fn + F9</button></li>
+<li><h2 class="wrap">Calculate Active Worksheet</h2><button class="ui-btn ui-btn-inline">Shift + F9</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F9</button></li>
+<li><h2 class="wrap">Force Calculate All Worksheets</h2><button class="ui-btn ui-btn-inline">Ctrl + Alt + F9</button>or <button class="ui-btn ui-btn-inline">Evaluate part of a formula</button></li>
+<li><h2 class="wrap">Evaluate Part Of A Formula</h2><button class="ui-btn ui-btn-inline">F9</button>or <button class="ui-btn ui-btn-inline">Fn + F9</button></li>
+<li><h2 class="wrap">Expand Or Collapse The Formula Bar</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + U</button>or <button class="ui-btn ui-btn-inline">⌃⇧U</button></li>
+<li><h2 class="wrap">Display Function Arguments Dialog Box</h2><button class="ui-btn ui-btn-inline">Ctrl + A</button>or <button class="ui-btn ui-btn-inline">⌃A</button></li>
+<li><h2 class="wrap">Define Name</h2><button class="ui-btn ui-btn-inline">Ctrl + F3</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃F3</button></li>
+<li><h2 class="wrap">Define Name Using Row And Column Labels</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + F3</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃⇧F3</button></li>
+<li><h2 class="wrap">Paste Name Into Formula</h2><button class="ui-btn ui-btn-inline">F3</button>or <button class="ui-btn ui-btn-inline">Accept function with autocomplete</button></li>
+<li><h2 class="wrap">Accept Function With Autocomplete</h2><button class="ui-btn ui-btn-inline">Tab</button>or <button class="ui-btn ui-btn-inline">↓Tab</button></li>
+<li><h2 class="wrap">Display Insert Dialog Box</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + +</button>or <button class="ui-btn ui-btn-inline">⌃I</button></li>
+<li><h2 class="wrap">Insert Rows</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + +</button>or <button class="ui-btn ui-btn-inline">⌃I</button></li>
+<li><h2 class="wrap">Insert Columns</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + +</button>or <button class="ui-btn ui-btn-inline">⌃I</button></li>
+<li><h2 class="wrap">Display Delete Dialog Box</h2><button class="ui-btn ui-btn-inline">Ctrl + -</button>or <button class="ui-btn ui-btn-inline">⌃-</button></li>
+<li><h2 class="wrap">Delete Rows</h2><button class="ui-btn ui-btn-inline">Ctrl + -</button>or <button class="ui-btn ui-btn-inline">⌃-</button></li>
+<li><h2 class="wrap">Delete Columns</h2><button class="ui-btn ui-btn-inline">Ctrl + -</button>or <button class="ui-btn ui-btn-inline">⌃-</button></li>
+<li><h2 class="wrap">Delete Cells</h2><button class="ui-btn ui-btn-inline">Ctrl + -</button>or <button class="ui-btn ui-btn-inline">⌃-</button></li>
+<li><h2 class="wrap">Delete Contents Of Selected Cells</h2><button class="ui-btn ui-btn-inline">Delete</button>or <button class="ui-btn ui-btn-inline">Fn + Delete</button></li>
+<li><h2 class="wrap">Hide Columns</h2><button class="ui-btn ui-btn-inline">Ctrl + 0</button>or <button class="ui-btn ui-btn-inline">⌃0</button></li>
+<li><h2 class="wrap">Hide Rows</h2><button class="ui-btn ui-btn-inline">Ctrl + 9</button>or <button class="ui-btn ui-btn-inline">⌃9</button></li>
+<li><h2 class="wrap">Unhide Rows</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + 9</button>or <button class="ui-btn ui-btn-inline">⌃⇧9</button></li>
+<li><h2 class="wrap">Unhide Columns</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + 0</button>or <button class="ui-btn ui-btn-inline">⌃⇧0</button></li>
+<li><h2 class="wrap">Group Rows Or Columns</h2><button class="ui-btn ui-btn-inline">Alt + Shift + →</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧K</button></li>
+<li><h2 class="wrap">Ungroup Rows Or Columns</h2><button class="ui-btn ui-btn-inline">Alt + Shift + ←</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧J</button></li>
+<li><h2 class="wrap">Open Group Dialog Box</h2><button class="ui-btn ui-btn-inline">Alt + Shift + →</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧K</button></li>
+<li><h2 class="wrap">Open Ungroup Dialog Box</h2><button class="ui-btn ui-btn-inline">Alt + Shift + ←</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧J</button></li>
+<li><h2 class="wrap">Hide Or Show Outline Symbols</h2><button class="ui-btn ui-btn-inline">Ctrl + 8</button>or <button class="ui-btn ui-btn-inline">⌃8</button></li>
+<li><h2 class="wrap">Select Entire Pivot Table</h2><button class="ui-btn ui-btn-inline">Ctrl + A</button>or <button class="ui-btn ui-btn-inline">⌘ + A</button></li>
+<li><h2 class="wrap">Toggle Pivot Table Field Checkbox</h2><button class="ui-btn ui-btn-inline">Space</button>or <button class="ui-btn ui-btn-inline">Space</button></li>
+<li><h2 class="wrap">Group Pivot Table Items</h2><button class="ui-btn ui-btn-inline">Alt + Shift + →</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧K</button></li>
+<li><h2 class="wrap">Ungroup Pivot Table Items</h2><button class="ui-btn ui-btn-inline">Alt + Shift + ←</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧J</button></li>
+<li><h2 class="wrap">Hide Pivot Table Item</h2><button class="ui-btn ui-btn-inline">Ctrl + -</button>or <button class="ui-btn ui-btn-inline">Ctrl-</button></li>
+<li><h2 class="wrap">Create Pivot Chart On Same Worksheet</h2><button class="ui-btn ui-btn-inline">Alt + F1</button>or <button class="ui-btn ui-btn-inline">Create pivot chart on new worksheet</button></li>
+<li><h2 class="wrap">Create Pivot Chart On New Worksheet</h2><button class="ui-btn ui-btn-inline">F11</button>or <button class="ui-btn ui-btn-inline">Fn + F11</button></li>
+<li><h2 class="wrap">Open Pivot Table Wizard</h2><button class="ui-btn ui-btn-inline">Alt + DP</button>or <button class="ui-btn ui-btn-inline">⌘ + ⌥P</button></li>
+<li><h2 class="wrap">Insert New Worksheet</h2><button class="ui-btn ui-btn-inline">Shift + F11</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F11</button></li>
+<li><h2 class="wrap">Go To Next Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + PgDn</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃↓</button></li>
+<li><h2 class="wrap">Go To Previous Worksheet</h2><button class="ui-btn ui-btn-inline">Ctrl + PgUp</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃↑</button></li>
+<li><h2 class="wrap">Move To Next Pane</h2><button class="ui-btn ui-btn-inline">F6</button>or <button class="ui-btn ui-btn-inline">Fn + F6</button></li>
+<li><h2 class="wrap">Move To Previous Pane</h2><button class="ui-btn ui-btn-inline">Shift + F6</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F6</button></li>
+<li><h2 class="wrap">Go To Next Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + Tab</button>or <button class="ui-btn ui-btn-inline">⌃Tab</button></li>
+<li><h2 class="wrap">Go To Previous Workbook</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + Tab</button>or <button class="ui-btn ui-btn-inline">⌃⇧Tab</button></li>
+<li><h2 class="wrap">Minimize Current Workbook Window</h2><button class="ui-btn ui-btn-inline">Ctrl + F9</button>or <button class="ui-btn ui-btn-inline">⌘ + M</button></li>
+<li><h2 class="wrap">Maximize Current Workbook Window</h2><button class="ui-btn ui-btn-inline">Ctrl + F10</button>or <button class="ui-btn ui-btn-inline">Fn + ⌃F10</button></li>
+<li><h2 class="wrap">Select Adjacent Worksheets</h2><button class="ui-btn ui-btn-inline">Shift + Click</button>or <button class="ui-btn ui-btn-inline">⇧Click</button></li>
+<li><h2 class="wrap">Select Non-Adjacent Worksheets</h2><button class="ui-btn ui-btn-inline">Ctrl + Click</button>or <button class="ui-btn ui-btn-inline">⌘ + Click</button></li>
+<li><h2 class="wrap">Toggle Scroll Lock</h2><button class="ui-btn ui-btn-inline">ScrLk</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F14</button></li>
+<li><h2 class="wrap">Move To Next Control</h2><button class="ui-btn ui-btn-inline">Tab</button>or <button class="ui-btn ui-btn-inline">Tab</button></li>
+<li><h2 class="wrap">Move To Previous Control</h2><button class="ui-btn ui-btn-inline">Shift + Tab</button>or <button class="ui-btn ui-btn-inline">⇧Tab</button></li>
+<li><h2 class="wrap">Move To Next Tab</h2><button class="ui-btn ui-btn-inline">Ctrl + Tab</button>or <button class="ui-btn ui-btn-inline">⌃Tab</button></li>
+<li><h2 class="wrap">Move To Previous Tab</h2><button class="ui-btn ui-btn-inline">Ctrl + Shift + Tab</button>or <button class="ui-btn ui-btn-inline">⌃⇧Tab</button></li>
+<li><h2 class="wrap">Accept And Apply</h2><button class="ui-btn ui-btn-inline">Enter</button>or <button class="ui-btn ui-btn-inline">Return</button></li>
+<li><h2 class="wrap">Check And Uncheck Box</h2><button class="ui-btn ui-btn-inline">Space</button>or <button class="ui-btn ui-btn-inline">Space</button></li>
+<li><h2 class="wrap">Cancel And Close The Dialog Box</h2><button class="ui-btn ui-btn-inline">Esc</button>or <button class="ui-btn ui-btn-inline">Esc</button></li>
+<li><h2 class="wrap">Open Spelling Dialog Box</h2><button class="ui-btn ui-btn-inline">F7</button>or <button class="ui-btn ui-btn-inline">Fn + F7</button></li>
+<li><h2 class="wrap">Open Thesaurus Dialog Box</h2><button class="ui-btn ui-btn-inline">Shift + F7</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F7</button></li>
+<li><h2 class="wrap">Open Macro Dialog Box</h2><button class="ui-btn ui-btn-inline">Alt + F8</button>or <button class="ui-btn ui-btn-inline">Fn + ⌥F8</button></li>
+<li><h2 class="wrap">Open Vba Editor</h2><button class="ui-btn ui-btn-inline">Alt + F11</button>or <button class="ui-btn ui-btn-inline">Fn + ⌥F11</button></li>
+<li><h2 class="wrap">Duplicate Object</h2><button class="ui-btn ui-btn-inline">Ctrl + D</button>or <button class="ui-btn ui-btn-inline">⌘ + D</button></li>
+<li><h2 class="wrap">Snap To Grid</h2><button class="ui-btn ui-btn-inline">Alt + </button>or <button class="ui-btn ui-btn-inline">⌘ + </button></li>
+<li><h2 class="wrap">Hide Or Show Objects</h2><button class="ui-btn ui-btn-inline">Ctrl + 6</button>or <button class="ui-btn ui-btn-inline">⌃6</button></li>
+<li><h2 class="wrap">Display Modify Cell Style Dialog Box</h2><button class="ui-btn ui-btn-inline">Alt + '</button>or <button class="ui-btn ui-btn-inline">⌘ + ⇧L</button></li>
+<li><h2 class="wrap">Display Shortcut Menu</h2><button class="ui-btn ui-btn-inline">Shift + F10</button>or <button class="ui-btn ui-btn-inline">Fn + ⇧F10</button></li>
+<li><h2 class="wrap">Display Control Menu</h2><button class="ui-btn ui-btn-inline">Alt + Space</button>or <button class="ui-btn ui-btn-inline">?</button></li>
+
+	
+</ul>
+  </div> </div>
+</div>  	
+
+
+	
+	</body>
+</html>
